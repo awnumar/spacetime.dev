@@ -13,7 +13,7 @@ sass:
 # Markup
 markdown: kramdown
 
-gems:
+plugins:
   - jekyll-feed
   - jekyll-sitemap
 
