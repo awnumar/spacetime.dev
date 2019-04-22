@@ -16,3 +16,5 @@ markdown: kramdown
 gems:
   - jekyll-feed
   - jekyll-sitemap
+
+include: [_headers, _redirects]
