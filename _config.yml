@@ -1,0 +1,18 @@
+# Permalinks
+permalink: :title
+
+# Setup
+url: https://spacetime.dev
+baseurl: ""
+
+# Assets
+sass:
+  sass_dir: _sass
+  style: :compressed
+
+# Markup
+markdown: kramdown
+
+gems:
+  - jekyll-feed
+  - jekyll-sitemap
