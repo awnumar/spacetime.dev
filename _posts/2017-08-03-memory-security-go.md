@@ -34,7 +34,7 @@ The remaining page, the one sandwiched between the guard pages, needs to be prot
 
 The last thing is the canary: a random value placed just before the data. If it ever changes, we know that something went wrong---probably a buffer underflow. When the program first ran, we generated a global value for the canary, so we just set the canary bytes to that, and the container is pretty much ready for use.
 
-![xkcd_protocol]({{ site.url }}/assets/images/memguard_memory_layout.png){: .center}
+![container_memory_layout](/assets/images/memguard_memory_layout.png){: .center}
 <center>The current state of our three pages.</center>
 
 All that is left to do now is handle the data itself. In our case the function [`NewImmutableRandom()`](https://godoc.org/github.com/awnumar/memguard#NewImmutableRandom) was called, which fills the created buffer with cryptographically-secure random bytes after it is created. A read-only status was also requested, so after the buffer is filled, we tell the kernel to only allow reads from the middle page. As before, any attempts to write to the buffer will trigger a SIGSEGV access violation and the process will panic.
