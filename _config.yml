@@ -2,6 +2,8 @@
 permalink: :title
 
 # Setup
+author: Awn Umar
+title: spacetime.dev
 url: https://spacetime.dev
 baseurl: ""
 
