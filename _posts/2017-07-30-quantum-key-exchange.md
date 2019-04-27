@@ -19,7 +19,7 @@ I'm not just talking perfect as in infinite computing power cannot touch it, I'm
 
 Consider two people---Alice and Bob---attempting to communicate securely, and a third person---Eve---attempting to intercept their communications. They have access to two **insecure** channels: a conventional one for bits, and a quantum one for qubits.
 
-![xkcd_protocol](/assets/images/xkcd-protocol.png){: width="40%" .center}
+![xkcd_protocol]({{ site.url }}/assets/images/xkcd-protocol.png){: width="40%" .center}
 <center>xkcd: <a href="https://xkcd.com/1323/">protocol</a></center>
 
 Alice has the option of using two different polarisation basis---rectilinear and diagonal---using which she can send either 0 or 1. She arbitrarily decides that a 1 encoded in the rectilinear basis will be vertically (0°) polarised, a 1 encoded in the diagonal basis will be polarised at 45°, and so on. This is summarised in the table:
