@@ -42,7 +42,7 @@ func ByteSlice(ptr *byte, len int, cap int) []byte {
 }
 ```
 
-This function will take a pointer, a length, and a capacity, and return a slice with those attributes. Using this, another way to convert an array to a slice would be:
+This function will take a pointer, a length, and a capacity; and return a slice with those attributes. Using this, another way to convert an array to a slice would be:
 
 ```go
 var bufarray [32]byte
@@ -88,6 +88,7 @@ func (b *buffer) free() {
         return
     }
     memcall.Free(b.Bytes)
+    b.Bytes = nil
 }
 ```
 
