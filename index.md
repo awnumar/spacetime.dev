@@ -9,7 +9,7 @@ title: home
 
 Programmer mostly [working on](https://github.com/awnumar) security stuff. Mathematics and computer science at the [University of Bristol](https://en.wikipedia.org/wiki/University_of_Bristol).
 
-Here I be plugging my projects and occasionally posting whatever I’m thinking about. I don’t receive a lot of emails (yet), so I tend to respond to all of them. If you have any questions or criticisms, feel free to contact me.
+Here I [post](/posts) about things I'm either working on or thinking about. I don't receive a lot of emails (yet) so I tend to respond to all of them. Feel free to use my inbox to introduce yourself or to fire any questions or concerns at.
 
 ## recent posts
 

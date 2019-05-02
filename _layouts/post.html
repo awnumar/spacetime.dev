@@ -4,11 +4,12 @@ layout: default
 
 <header>
     <h1>{{ page.title }}</h1>
-    <p class="header-date">{{ page.date | date_to_long_string }}</p>
+    <p>{{ page.date | date_to_long_string }}</p>
 </header>
 {{ content }}
 
-<ul>
+<ul class="nav-bottom">
+    <li><a href="/">home</a></li>
     <li><a href="/posts">more posts</a></li>
     <li><a href="/feed.xml">subscribe with rss</a></li>
 </ul>
