@@ -62,7 +62,7 @@ uint32slice := *(*[]uint32)(unsafe.Pointer(&sl))
 
 **But there is a catch**. This "raw" construction converts the `unsafe.Pointer` object into a `uintptr`---a "dumb" integer address---which will not describe the region of memory you want if the runtime or garbage collector moves the original object around. To ensure that this doesn't happen you can allocate your own memory using system-calls or a C allocator like [`malloc`](https://linux.die.net/man/3/malloc). This is exactly what we had to in [memguard](https://github.com/awnumar/memguard): the system-call wrapper is available [here](https://godoc.org/github.com/awnumar/memguard/memcall#Alloc). To avoid memory leaks, remember to [free](https://godoc.org/github.com/awnumar/memguard/memcall#Free) your allocations!
 
-It seems a bit wasteful to have a garbage collector and not use it though, so why don't we let it do the freeing for us? First create a container structure to work with:
+It seems a bit wasteful to have a garbage collector and not use it though, so why don't we let it catch some of the freeing for us? First create a container structure to work with:
 
 ```go
 type buffer struct {
@@ -92,7 +92,7 @@ func (b *buffer) free() {
 }
 ```
 
-We use [`runtime.SetFinalizer`](https://golang.org/pkg/runtime/#SetFinalizer) to inform the runtime about our object and what to do when it drops out of scope. Modifying `alloc` to include this looks like:
+We use [`runtime.SetFinalizer`](https://golang.org/pkg/runtime/#SetFinalizer) to inform the runtime about our object and what to do if it finds it some time after it becomes unreachable. Modifying `alloc` to include this looks like:
 
 ```go
 func alloc(size int) *buffer {
