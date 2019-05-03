@@ -102,7 +102,7 @@ func alloc(size int) *buffer {
 
     buf := &buffer{memcall.Alloc(size)}
 
-    runtime.SetFinalizer(buf, func(_ *buffer) {
+    runtime.SetFinalizer(buf, func(buf *buffer) {
         go buf.free()
     })
 
