@@ -20,7 +20,7 @@ var bufarray [32]byte
 copy(bufarray[:], bufslice)
 ```
 
-"What if I don't want to make a copy?", I hear you ask. You could be handling sensitive data or maybe you're just optimizing the shit out of everything. In any case we can grab a pointer and do it ourselves:
+"What if I don't want to make a copy?", I hear you ask. You could be handling sensitive data or maybe you're just optimizing the shit out of something. In any case we can grab a pointer and do it ourselves:
 
 ```go
 bufarrayptr := (*[32]byte)(unsafe.Pointer(&buf[0])) // *[32]byte (same memory region)
@@ -60,7 +60,7 @@ var sl = struct {
 uint32slice := *(*[]uint32)(unsafe.Pointer(&sl))
 ```
 
-**But there is a catch**. This "raw" construction converts the `unsafe.Pointer` object into a `uintptr`---a "dumb" integer address---which will not describe the region of memory you want if the runtime or garbage collector moves the original object around. To ensure that this doesn't happen you can allocate your own memory using system-calls or a C allocator like [`malloc`](https://linux.die.net/man/3/malloc). This is exactly what I had to in [memguard](https://github.com/awnumar/memguard): the system-call wrapper is available [here](https://godoc.org/github.com/awnumar/memguard/memcall#Alloc). To avoid memory leaks, remember to [free](https://godoc.org/github.com/awnumar/memguard/memcall#Free) your allocations!
+**But there is a catch**. This "raw" construction converts the `unsafe.Pointer` object into a `uintptr`---a "dumb" integer address---which will not describe the region of memory you want if the runtime or garbage collector moves the original object around. To ensure that this doesn't happen you can allocate your own memory using system-calls or a C allocator like [`malloc`](https://linux.die.net/man/3/malloc). This is exactly what we had to in [memguard](https://github.com/awnumar/memguard): the system-call wrapper is available [here](https://godoc.org/github.com/awnumar/memguard/memcall#Alloc). To avoid memory leaks, remember to [free](https://godoc.org/github.com/awnumar/memguard/memcall#Free) your allocations!
 
 It seems a bit wasteful to have a garbage collector and not use it though, so why don't we let it do the freeing for us? First create a container structure to work with:
 
