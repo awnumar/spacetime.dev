@@ -5,7 +5,7 @@ title: home
 
 # awn umar
 
-[email](mailto:awn@spacetime.dev) :: [pgp](/my/key.txt) :: [github](https://github.com/awnumar) :: [keybase](https://keybase.io/awn)
+[email](mailto:awn@spacetime.dev){:rel="me"} :: [pgp](/my/key.txt){:rel="pgpkey"} :: [github](https://github.com/awnumar){:rel="me"} :: [keybase](https://keybase.io/awn){:rel="me"}
 
 Programmer mostly [working on](https://github.com/awnumar) security stuff. Mathematics and computer science at the [University of Bristol](https://en.wikipedia.org/wiki/University_of_Bristol).
 
