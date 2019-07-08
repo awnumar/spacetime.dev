@@ -1,0 +1,3 @@
+- name: memguard
+  url: https://github.com/awnumar/memguard
+  description: secure software enclave for storage of sensitive information in memory

@@ -16,8 +16,9 @@ Here I [post](/posts) about things I'm working on or thinking about. I don't rec
 [all posts](/posts) :: [subscribe](/feed.xml)
 
 {% for post in site.posts limit: 4 %}
-- `{{ post.date | date: "%Y-%m-%d" }}` :: [{{ post.title }}]({{ post.url }}) {% endfor %}
+- `{{ post.date | date: "%Y-%m-%d" }}` :: [{{ post.title }}]({{ post.url }}){% endfor %}
 
 ## projects
 
-- [memguard](https://github.com/awnumar/memguard) :: secure software enclave for storage of sensitive information in memory
+{% for project in site.data.projects %}
+- [{{ project.name }}]({{ project.url }}) :: {{ project.description }}{% endfor %}
