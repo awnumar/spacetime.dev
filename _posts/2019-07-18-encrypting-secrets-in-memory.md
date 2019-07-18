@@ -60,8 +60,6 @@ It is clear from this that our iterative overwriting steps do not affect the val
 
 An issue with the Boojum scheme is that it has a relatively high overhead from two guarded allocations using six memory pages in total, and we have to compute and write 64 bytes every $ m $ milliseconds. However we only store a single global key, and the overhead can be tweaked by scaling $ m $ as needed. Its value at the time of writing is 8 milliseconds.
 
-Sourcing cryptographically-strong entropy every 8 milliseconds is another issue, and currently memguard just calls `crypto/rand` every time. However there are potential [alternatives](https://gitlab.com/NebulousLabs/fastrand) that use the system's secure entropy source to seed a faster, local CSPRNG.
-
 The authors of the Boojum claim that it defends against cold boot attacks, and I would speculate that there is also some defence against [side-channel attacks](https://en.wikipedia.org/wiki/Speculative_execution#Security_vulnerabilities) due to the fact that $ k $ is split across two different locations in memory and each partition is constantly changing. Those attacks usually have an error rate and are relatively slow.
 
 OpenBSD added a somewhat related [mitigation](https://github.com/openbsd/src/commit/707316f931b35ef67f1390b2a00386bdd0863568) to their ssh implementation that stores a 16 KiB (static) "pre-key" that is hashed to derive the final key when it is needed. I investigated incorporating it somehow but [decided against it](https://github.com/awnumar/memguard/issues/88#issuecomment-511366666). Both schemes have a weak point when the key is in "unlocked" form so mimimising this window of opportunity is ideal.
