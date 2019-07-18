@@ -4,5 +4,4 @@
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
   Referrer-Policy: no-referrer-when-downgrade
   X-Content-Type-Options: nosniff
-  Content-Security-Policy: default-src 'self' https:; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'
-
+  Content-Security-Policy: default-src 'self' https:; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com
