@@ -11,7 +11,7 @@ But why? Well, there are limitations to the old solution of using guarded heap a
 1. A minimum of three memory pages have to be allocated for each value: two guard pages sandwiching $$ n \geq 1 $$ data pages.
 2. Some systems impose an upper limit on the amount of memory that an individual process is able to prevent from being [swapped](https://en.wikipedia.org/wiki/Paging) out to disk.
 
-![Memory layout of guarded heap allocation.]({{ site.url }}/assets/images/coffer_partition.svg){: .center}
+![Memory layout of guarded heap allocation.]({{ site.url }}/assets/images/guarded_allocation.png){: .center}
 <center>Typical layout of a 32 byte guarded heap allocation.</center>
 
 So it is worth looking into the use of encryption to protect information. After all, ciphertext does not have to be treated with much care and authentication guarantees immutability for free. The problem of recovering a secret is shifted to recovering the key that protects it.
@@ -66,7 +66,7 @@ OpenBSD added a somewhat related [mitigation](https://github.com/openbsd/src/com
 
 In memguard the key is initialised when the program starts and then hangs around in the background---constantly flickering---until it is needed. When some data needs to be encrypted or decrypted, the key is unlocked and used for the operation and then it is destroyed.
 
-![Diagram showing the high-level structure of the scheme.]({{ site.url }}/assets/images/memguard_structure.svg){: .center}
+![Diagram showing the high-level structure of the scheme.]({{ site.url }}/assets/images/memguard_structure.png){: .center}
 <center>High-level overview of the encryption scheme.</center>
 
 The [documentation](https://godoc.org/github.com/awnumar/memguard) provides a relatively intuitive guide to the package's functionality. The [`Enclave`](https://godoc.org/github.com/awnumar/memguard#Enclave) stores ciphertext, the [`LockedBuffer`](https://godoc.org/github.com/awnumar/memguard#LockedBuffer) stores plaintext, and [`core.Coffer`](https://godoc.org/github.com/awnumar/memguard/core#Coffer) implements the Boojum. Examples are available in the [examples](https://github.com/awnumar/memguard/tree/master/examples) sub-package.
