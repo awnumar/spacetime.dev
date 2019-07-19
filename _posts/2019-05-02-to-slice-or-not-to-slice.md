@@ -3,7 +3,7 @@ layout: post
 title: to slice or not to slice
 ---
 
-Go is an incredibly useful programming language because it hands you a fair amount of **power** while remaining fairly succinct. Here are are few bits of knowledge I've picked up in my time spent with it.
+Go is an incredibly useful programming language because it hands you a fair amount of **power** while remaining fairly succinct. Here are few bits of knowledge I've picked up in my time spent with it.
 
 Say you have a fixed-size byte array and you want to pass it to a function that only accepts slices. That's easy, you can "slice" it:
 
