@@ -60,7 +60,7 @@ var sl = struct {
 uint32slice := *(*[]uint32)(unsafe.Pointer(&sl))
 ```
 
-**But there is a catch**. This "raw" construction converts the `unsafe.Pointer` object into a `uintptr`---a "dumb" integer address---which will not describe the region of memory you want if the runtime or garbage collector moves the original object around. To ensure that this doesn't happen you can allocate your own memory using system-calls or a C allocator like [`malloc`](https://linux.die.net/man/3/malloc). This is exactly what we had to in [memguard](https://github.com/awnumar/memguard): the system-call wrapper is available [here](https://godoc.org/github.com/awnumar/memguard/memcall#Alloc). To avoid memory leaks, remember to [free](https://godoc.org/github.com/awnumar/memguard/memcall#Free) your allocations!
+**But there is a catch**. This "raw" construction converts the `unsafe.Pointer` object into a `uintptr`---a "dumb" integer address---which will not describe the region of memory you want if the runtime or garbage collector moves the original object around. To ensure that this doesn't happen you can allocate your own memory using system-calls or a C allocator like [`malloc`](https://linux.die.net/man/3/malloc). This is exactly what we had to in [memguard](https://github.com/awnumar/memguard): the system-call wrapper is available [here](https://godoc.org/github.com/awnumar/memcall#Alloc). To avoid memory leaks, remember to [free](https://godoc.org/github.com/awnumar/memcall#Free) your allocations!
 
 It seems a bit wasteful to have a garbage collector and not use it though, so why don't we let it catch some of the freeing for us? First create a container structure to work with:
 
@@ -73,7 +73,7 @@ type buffer struct {
 Add some generic constructor and destructor functions:
 
 ```go
-import "github.com/awnumar/memguard/memcall"
+import "github.com/awnumar/memcall"
 
 func alloc(size int) *buffer {
     if size < 1 {
