@@ -42,3 +42,5 @@ We can also instruct the kernel to disallow writes to the data pages so that any
 This project is under active development and so there may be new features and breaking changes in the future. You can view the source code [here](https://github.com/awnumar/memguard), and full documentation can be found [here](https://godoc.org/github.com/awnumar/memguard).
 
 Note that while we can try to do the best we can we will only ever be lowering the likelihood of sensitive data being exposed, not eliminating the possibility altogether.
+
+> update: a later version of this software introduces [in-memory encryption]({{ site.url }}/encrypting-secrets-in-memory) of secrets
