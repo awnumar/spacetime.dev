@@ -1,3 +1,6 @@
+- name: memcall
+  url: https://github.com/awnumar/memcall
+  description: cross-platform wrapper over some common memory-related system calls
 - name: memguard
   url: https://github.com/awnumar/memguard
   description: secure software enclave for storage of sensitive information in memory
