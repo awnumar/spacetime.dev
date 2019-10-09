@@ -25,7 +25,6 @@ Define $ B = \{i : 0 \leq i \leq 255\} $ to be the set of values that a byte may
 
 Suppose $ k \in B^{32} $ is the key we want to protect and $ R_n \in B^{32} $ is some random bytes sourced from a suitable [CSPRNG](https://en.wikipedia.org/wiki/Cryptographically_secure_pseudorandom_number_generator). We initialise the two partitions:
 
-
 $$
 \begin{aligned}
 x_1 &= R_1\\

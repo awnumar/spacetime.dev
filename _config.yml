@@ -7,11 +7,6 @@ title: spacetime.dev
 url: https://spacetime.dev
 baseurl: ""
 
-# Assets
-sass:
-  sass_dir: _sass
-  style: :compressed
-
 # Markup
 markdown: kramdown
 highlighter: rouge
