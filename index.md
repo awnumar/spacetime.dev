@@ -7,9 +7,9 @@ title: home
 
 [email](mailto:awn@spacetime.dev){:rel="me"} :: [pgp](/my/key.txt){:rel="pgpkey"} :: [github](https://github.com/awnumar){:rel="me"} :: [keybase](https://keybase.io/awn){:rel="me"}
 
-Programmer mostly [working on](https://github.com/awnumar) security stuff. Mathematics and computer science at the [University of Bristol](https://en.wikipedia.org/wiki/University_of_Bristol).
+Programmer mostly [working on](https://github.com/awnumar) security stuff. Mathematics and computer science at the [University of Bristol](https://en.wikipedia.org/wiki/University_of_Bristol). Here I [post](/posts) about things I'm working on or thinking about. Feel free to get in touch with any thoughts, questions, or criticisms.
 
-Here I [post](/posts) about things I'm working on or thinking about. I don't receive too many emails so I tend to respond to all of them. For sensitive information, my pgp key is `0xD4C316B83295F6FF`, available [here](/my/key.txt).
+My pgp key is `0xD4C316B83295F6FF`, available [here](/my/key.txt), on [Keybase](https://keybase.io/awn/pgp_keys.asc), and via the [OpenPGP keyserver](http://keys.gnupg.net/pks/lookup?search=awn%40spacetime.dev&fingerprint=on&op=index). These sources should mutually agree.
 
 ## recent posts
 
