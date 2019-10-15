@@ -9,7 +9,7 @@ title: home
 
 Programmer mostly [working on](https://github.com/awnumar) security stuff. Mathematics and computer science at the [University of Bristol](https://en.wikipedia.org/wiki/University_of_Bristol). Here I [post](/posts) about things I'm working on or thinking about. Feel free to get in touch with any thoughts, questions, or criticisms.
 
-My pgp key is `0xD4C316B83295F6FF`, available [here](/my/key.txt), on [Keybase](https://keybase.io/awn/pgp_keys.asc), and via the [OpenPGP keyserver](http://keys.gnupg.net/pks/lookup?search=awn%40spacetime.dev&fingerprint=on&op=index). These sources should mutually agree.
+My pgp key is `0xD4C316B83295F6FF`, available [here](/my/key.txt), on [Keybase](https://keybase.io/awn/pgp_keys.asc), and via the [OpenPGP keyserver](https://keys.openpgp.org/search?q=awn%40spacetime.dev). These sources should mutually agree.
 
 ## recent posts
 
