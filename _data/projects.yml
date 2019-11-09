@@ -1,3 +1,6 @@
 - name: memguard
   url: https://github.com/awnumar/memguard
   description: secure software enclave for storage of sensitive information in memory
+- name: gravity
+  url: https://github.com/awnumar/gravity
+  description: experimental user-space data protection utility providing plausibly deniable encryption
