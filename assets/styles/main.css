@@ -87,7 +87,7 @@ tbody tr:nth-child(odd) th {
 blockquote {
     padding: 0 1rem;
     margin: 1rem 0;
-    color: #696969;
+    color: #555555;
     border-left: .25rem solid #e5e5e5;
 }
 
