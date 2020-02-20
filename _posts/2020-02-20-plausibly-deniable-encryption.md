@@ -55,25 +55,27 @@ Imagine a huge library where every book is full of gibberish. There is a librari
 > 
 > For decryption, again Alice provides the key $ k $ and Faythe computes the sub-keys $ a, b = \Phi(k) $. She then iterates over $ i \in \mathbb{N} $, retrieving the values $ c_i $ corresponding to the keys $ H_a(i) $ and computing $ D_b(c_i) = D_b(E_b(p_i)) = p_i $, stopping at $ i = n + 1 $ where the key-value pair does not exist. The plaintext is then $ p = p_1 \mathbin\Vert p_2 \mathbin\Vert \ldots \mathbin\Vert p_n $, after unpadding each $ p_i $.
 >
-> Some extra consideration has to go into integrity and authentication to prevent attacks where the data Alice stores is not the data she gets back out. We leave this out here for simplicity's sake.
+> Some extra consideration has to go into integrity and authentication to prevent attacks where the data Alice stores is not the data she gets back out. We leave this out for simplicity's sake.
 
 Suppose the library contains $ n $ books in total. Mallory cannot say anything about Alice's data apart from that its total size is less than or equal to the amount of data that can be stored within $ n $ books. If, under duress, Alice is forced to reveal a decoy key that pieces together data from $ m $ books, she needs some way to explain the remaining $ n - m $ books that were not used. She could claim that,
 
-1. The key for those books has been lost or forgotten.
-2. They are composed of random noise and so cannot be decrypted.
-3. They belong to other people and so the key is not known to her.
+<ol type="A">
+<li>The key for those books has been lost or forgotten.</li>
+<li>They are composed of random noise and so cannot be decrypted.</li>
+<li>They belong to other people and so the key is not known to her.</li>
+</ol>
 
 This will look mostly familiar. Alice is trying to avoid revealing her actual data by providing a decoy key that unlocks some innocuous data. She then has to make a secondary claim in order to explain the remaining data that was not decrypted under the provided key.
 
-Claiming ignorance (**1**) has the same trivial plausibility argument and practical limitation as before.
+Claiming ignorance (**A**) has the same trivial plausibility argument and practical limitation as before (**1**).
 
-Asserting that the leftover books are composed of random bytes (**2**) requires an explanation for _how_ they came to be there. She could say simply that she added them but this is a [can of worms](https://en.wiktionary.org/wiki/can_of_worms) that we want to keep closed. If some software implementation decides how many decoy books to add, it would necessarily leak information to Mallory about the _expected_ frequency of decoys. This value can be compared with Alice's claim of $ n - m $ decoys to come up with an indicator of whether Alice is lying.
+Asserting that the leftover books are composed of random bytes (**B**) requires an explanation for _how_ they came to be there. She could say simply that she added them but this is a [can of worms](https://en.wiktionary.org/wiki/can_of_worms) that we want to keep closed. If some software implementation decides how many decoy books to add, it would necessarily leak information to Mallory about the _expected_ frequency of decoys. This value can be compared with Alice's claim of $ n - m $ decoys to come up with an indicator of whether Alice is lying.
 
 We have the same problem if the frequency is decided randomly as the value would have to lie within some range. We can get around this by asking Alice herself to decide the frequency, but this is messy and humans are bad at being unpredictable. In any case, this strategy boils down to Alice claiming "I added decoy entries explicitly in order to explain leftover data", and this would rightly make an adversary extremely suspicious.
 
-A better way to utilise **2** is for Faythe to replace books that are to be deleted with random data instead of removing them outright. Then Alice can claim that the remaining books have been deleted and therefore the data no longer exists and cannot be decrypted. This way potentially any number of leftover books can be easily explained, but it does mean that the size of our library will only increase over time.
+A better way to utilise **B** is for Faythe to replace books that are to be deleted with random data instead of removing them outright. Then Alice can claim that the remaining books have been deleted and therefore the data no longer exists and cannot be decrypted. This way potentially any number of leftover books can be easily explained, but it does mean that the size of our library will only increase over time.
 
-Claim **3** is new and has some appealing properties but it can't be used on a personal storage medium—like Alice's laptop hard drive—as there is unlikely to be a plausible reason for other people's data to be there. Imagine instead that the "library" is hosted on a service shared by multiple people. Then it is easy for Alice to claim that the remaining entries are not hers. Mallory would need leverage over every other person using the service in order to disprove Alice's claim. Such a service has to be carefully designed however. For example if it stored how much space Alice is using then this value can be compared with Alice's claim and Mallory wins.
+Claim **C** is new and has some appealing properties but it can't be used on a personal storage medium—like Alice's laptop hard drive—as there is unlikely to be a plausible reason for other people's data to be there. Imagine instead that the "library" is hosted on a service shared by multiple people. Then it is easy for Alice to claim that the remaining entries are not hers. Mallory would need leverage over every other person using the service in order to disprove Alice's claim. Such a service has to be carefully designed however. For example if it stored how much space Alice is using then this value can be compared with Alice's claim and Mallory wins.
 
 There are some drawbacks of this scheme. There is an overhead in storing data in discrete, padded chunks. Modifying data in a non-trivial way may be expensive. Overwriting entries instead of removing them uses up storage space that is "wasted" in the sense that it does not hold any useful data. In designing this protocol what I have found is that we have to be **extremely careful** to avoid losing our deniability. Any implementation has to be verified to ensure that it does not fall short in this regard.
 
