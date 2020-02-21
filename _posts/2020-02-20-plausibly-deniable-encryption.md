@@ -45,6 +45,8 @@ This is an example of providing a decoy decryption (**3**) but you may notice th
 
 Providing a plausible reason for the existence of leftover data can be tricky. VeraCrypt relies on the fact that drives are often [wiped with random data](https://wiki.archlinux.org/index.php/Disk_encryption#Preparing_the_disk) before being used as encrypted volumes. In other situations we may have to be sneakier.
 
+This strategy does have some practical limitations. If the volume hosts an operating system, the innocuous OS has to be used as frequently as the hidden one to make it seem legitimate. For example if Alice provides the key and Mallory sees that the last login was two years ago, but she knows that Alice logged in the day before, then Mallory can be pretty sure something is off. Also consider what happens if Mallory sees a snapshot of the drive before and after some data is modified in the hidden volume. She then knows that there is data there and that it is not simply the remnants of an earlier wipe.
+
 ### The Dissident Protocol
 
 Imagine a huge library where every book is full of gibberish. There is a librarian who will help you store and retrieve your data within the library. You give her a bunch of data and a master key. She uses the master key to derive an encryption key and a random location oracle. The data is then split into book-sized pieces, each of which is encrypted with the derived key. Finally each encrypted book is stored at a location provided by the oracle.
