@@ -1,5 +1,5 @@
-/404					/404				404
-/feed   				/feed.xml   			301
-/articles				/posts				301
-/about					/				301
+/404					/404				404!
+/feed   				/feed.xml   			301!
+/articles				/posts				301!
+/about					/				301!
 https://spacetimedev.netlify.com/*	https://spacetime.dev/:splat	301!
