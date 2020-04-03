@@ -5,7 +5,7 @@ title: encrypting secrets in memory
 
 {% katexmm %}
 
-In a [previous post]({{ site.url }}/memory-security-go) I talked about designing and implementing an in-memory data structure for storing sensitive information in Go. The latest version of [memguard](https://github.com/awnumar/memguard) adds something new: encryption.
+In a [previous post]({{ site.url }}/memory-security-go.html) I talked about designing and implementing an in-memory data structure for storing sensitive information in Go. The latest version of [memguard](https://github.com/awnumar/memguard) adds something new: encryption.
 
 But why? Well, there are limitations to the old solution of using guarded heap allocations for everything.
 
@@ -19,7 +19,7 @@ So it is worth looking into the use of encryption to protect information. After 
 
 But there is the obvious problem. Where and how do you store the encryption key?
 
-We use a scheme described by [Bruce Schneier](https://en.wikipedia.org/wiki/Bruce_Schneier) in [Cryptography Engineering](https://www.schneier.com/books/cryptography_engineering/). The procedure is sometimes referred to as a [Boojum]({{ site.url }}/memory-retention-attacks). I will formally define it below for convenience.
+We use a scheme described by [Bruce Schneier](https://en.wikipedia.org/wiki/Bruce_Schneier) in [Cryptography Engineering](https://www.schneier.com/books/cryptography_engineering/). The procedure is sometimes referred to as a [Boojum]({{ site.url }}/memory-retention-attacks.html). I will formally define it below for convenience.
 
 Define $ B = \{i : 0 \leq i \leq 255\} $ to be the set of values that a byte may take. Define $ h : B^n \to B^{32} $ for $ n \in \mathbb{N}_0 $ to be a [cryptographically-secure](https://en.wikipedia.org/wiki/Cryptographic_hash_function) hash function. Define the binary [XOR](https://en.wikipedia.org/wiki/Exclusive_or) operator $ \oplus : B^n \times B^n \to B^n $.
 

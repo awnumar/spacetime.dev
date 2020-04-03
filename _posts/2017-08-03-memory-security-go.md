@@ -43,4 +43,4 @@ This project is under active development and so there may be new features and br
 
 Note that while we can try to do the best we can we will only ever be lowering the likelihood of sensitive data being exposed, not eliminating the possibility altogether.
 
-> update: a later version of this software introduces [in-memory encryption]({{ site.url }}/encrypting-secrets-in-memory) of secrets
+> update: a later version of this software introduces [in-memory encryption]({{ site.url }}/encrypting-secrets-in-memory.html) of secrets
