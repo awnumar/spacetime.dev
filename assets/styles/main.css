@@ -4,16 +4,19 @@ html {
     --links: #d83033;
     --code-block-background: #323031;
     --code-inline-background: #f9f9f9;
-    --quote-background: #F2EFE9
+    --quote-background: #F2EFE9;
 }
 
-@media (prefers-color-scheme:dark) {
+/* @media (prefers-color-scheme:dark) {
     html {
-        --text: #2a2a2a;
-        --background: #FFFFFF;
-        --links: #d83033
+        --text: #FFFFFF;
+        --background: #252627;
+        --links: #F5CDA7;
+        --code-block-background: #323031;
+        --code-inline-background: #323031;
+        --quote-background: #252627;
     }
-}
+} */
 
 body {
     font-family: Helvetica, Arial, sans-serif;
@@ -110,9 +113,9 @@ th {
 }
 
 blockquote {
-    padding: .2rem .5rem;
+    padding: .2rem .6rem;
     margin: .5rem 0;
-    border-left: .2rem solid var(--code-block-background);
+    border-left: .2rem solid var(--text);
     background-color: var(--quote-background);
     border-radius: 4px
 }
