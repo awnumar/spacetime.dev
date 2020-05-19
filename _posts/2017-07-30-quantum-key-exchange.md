@@ -31,15 +31,11 @@ Alice has the option of using two different polarisation basis---rectilinear and
 
 She informs Bob of this scheme through the conventional channel, and now they are ready to exchange keys.
 
-Alice begins by generating cryptographically-secure random pairings of bits and basis---**huge** amounts of them. For example,
+{% katexmm %}
 
-```
-1: diagonal,
-0: diagonal,
-0: rectilinear,
-1: diagonal,
-...
-```
+Alice begins by generating cryptographically-secure random pairings of bits and basis---**huge** amounts of them. For example, $\{(1, diagonal), (0, diagonal), (0, rectilinear), \ldots\}$.
+
+{% endkatexmm %}
 
 One at a time, she encodes the bits in their associated basis and sends the resulting polarised photons to Bob through the quantum channel. Now, the way this works is that any party that wishes to read these incoming qubits cannot tell which basis they were encoded in---so they just guess. But there's another catch: if they measure the qubit in the wrong basis, the reading they get is purely random, and the qubit is destroyed in either case.
 
