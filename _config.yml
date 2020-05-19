@@ -17,3 +17,4 @@ plugins:
   - jekyll-katex
 
 include: [_headers, _redirects]
+exclude: [LICENCE]
