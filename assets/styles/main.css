@@ -4,55 +4,56 @@ body {
     line-height: 1.5;
     padding: 2rem 1rem;
     margin: auto;
-    color: #2a2a2a;
+    color: #2a2a2a
 }
 
 h1 {
-    margin-top: .5rem;
-    margin-bottom: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0
 }
 
 h2 {
     margin-top: 2rem;
+    margin-bottom: 0.4rem;
 }
 
 li {
-    margin: 0.3rem;
+    margin: .3rem
 }
 
 p {
-    margin-top: 0.3rem;
-    margin-bottom: 0.3rem;
+    margin-top: .3rem;
+    margin-bottom: .3rem;
     padding-top: 0;
-    padding-bottom: 0;
+    padding-bottom: 0
 }
 
 a {
-    color: #d83033;
+    color: #d83033
 }
 
 img {
-    max-width: 100%;
+    max-width: 100%
 }
 
 .center {
     margin: 0 auto;
-    display: block;
+    display: block
 }
 
 .menu {
     padding: 0;
     margin: 0;
-    text-align: right;
+    text-align: right
 }
 
 .menu a {
     padding: 0 .2rem;
-    margin: 0;
+    margin: 0
 }
 
 .nav-bottom {
-    padding-top: .4rem;
+    padding-top: .4rem
 }
 
 pre code {
@@ -60,13 +61,13 @@ pre code {
     display: block;
     padding: 1rem;
     overflow-x: scroll;
-    overflow-y: hidden;
+    overflow-y: hidden
 }
 
 code {
     background-color: #f9f9f9;
     padding: .2rem;
-    font-size: 105%;
+    font-size: 105%
 }
 
 table {
@@ -74,56 +75,56 @@ table {
     font-size: 85%;
     border: 1px solid #e5e5e5;
     border-collapse: collapse;
-    margin: auto;
+    margin: auto
 }
 
 td,
 th {
     padding: .25rem .5rem;
-    border: 1px solid #e5e5e5;
+    border: 1px solid #e5e5e5
 }
 
 th {
-    text-align: left;
+    text-align: left
 }
 
 tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
-    background-color: #f9f9f9;
+    background-color: #f9f9f9
 }
 
 blockquote {
     padding: 0 1rem;
     margin: 1rem 0;
     color: #555;
-    border-left: .25rem solid #e5e5e5;
+    border-left: .25rem solid #e5e5e5
 }
 
 .highlight {
-    font-size: 105%;
+    font-size: 105%
 }
 
 .highlight .c {
     color: #998;
-    font-style: italic;
+    font-style: italic
 }
 
 .highlight .err {
     color: #a61717;
-    background-color: #e3d2d2;
+    background-color: #e3d2d2
 }
 
 .highlight .k {
-    font-weight: 700;
+    font-weight: 700
 }
 
 .highlight .o {
-    font-weight: 700;
+    font-weight: 700
 }
 
 .highlight .cm {
     color: #998;
-    font-style: italic;
+    font-style: italic
 }
 
 .highlight .cp {
