@@ -15,7 +15,7 @@ My pgp key is `0xD4C316B83295F6FF`, available [here](/my/key.txt), on [Keybase](
 
 [all posts](/posts) :: [subscribe](/feed.xml)
 
-{% for post in site.posts limit: 5 %}
+{% for post in site.posts limit: 4 %}
 - `{{ post.date | date: "%Y-%m-%d" }}` :: [{{ post.title }}]({{ post.url }}){% endfor %}
 
 ## projects
