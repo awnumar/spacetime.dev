@@ -4,17 +4,14 @@ html {
     --links: #d83033;
     --code-block-background: #323031;
     --code-inline-background: #f9f9f9;
-    --quote-background: #F2EFE9;
+    --quote-background: #F2EFE9
 }
 
 @media (prefers-color-scheme:dark) {
     html {
         --text: #2a2a2a;
         --background: #FFFFFF;
-        --links: #d83033;
-        --code-block-background: #323031;
-        --code-inline-background: #f9f9f9;
-        --quote-background: #F2EFE9;
+        --links: #d83033
     }
 }
 
@@ -34,7 +31,7 @@ h1 {
 }
 
 h2 {
-    margin-top: 2rem;
+    margin-top: 1.8rem;
     margin-bottom: .4rem
 }
 
@@ -83,7 +80,7 @@ pre code {
     padding: 1rem;
     overflow-x: auto;
     overflow-y: hidden;
-    border-radius: 4px;
+    border-radius: 4px
 }
 
 code {
@@ -98,7 +95,7 @@ table {
     border: 1px solid var(--quote-background);
     border-collapse: collapse;
     margin: 1.5rem auto;
-    border-radius: 4px;
+    border-radius: 4px
 }
 
 td,
@@ -117,7 +114,7 @@ blockquote {
     margin: .5rem 0;
     border-left: .2rem solid var(--code-block-background);
     background-color: var(--quote-background);
-    border-radius: 4px;
+    border-radius: 4px
 }
 
 .highlight pre {
