@@ -6,12 +6,12 @@ title: home
 # awn umar
 
 <div id="nav">
-<a href="mailto:awn@spacetime.dev" rel="me">email</a> :: <a href="{{ site.url }}/public-key.rsa" rel="me">pgp</a> :: <a href="https://github.com/awnumar" rel="me">github</a> :: <a href="https://keybase.io/awn" rel="me">keybase</a>
+<a href="mailto:awn@spacetime.dev" rel="me">email</a> :: <a href="{{ site.url }}/public-key.pgp" rel="me">pgp</a> :: <a href="https://github.com/awnumar" rel="me">github</a> :: <a href="https://keybase.io/awn" rel="me">keybase</a>
 </div>
 
 Programmer mostly [working on](https://github.com/awnumar) security stuff. Mathematics and computer science at the [University of Bristol](https://en.wikipedia.org/wiki/University_of_Bristol). Here I [post](/posts) about things I'm working on or thinking about.
 
-My pgp key is `0xD4C316B83295F6FF`, available [here](/my/key.txt), on [Keybase](https://keybase.io/awn/pgp_keys.asc), and via [keys.openpgp.org](https://keys.openpgp.org/search?q=awn%40spacetime.dev). These sources should mutually agree.
+My pgp key is `0xD4C316B83295F6FF`, available [here]({{ site.url }}/public-key.pgp), on [Keybase](https://keybase.io/awn/pgp_keys.asc), and via [keys.openpgp.org](https://keys.openpgp.org/search?q=awn%40spacetime.dev). These sources should mutually agree.
 
 ## recent posts
 
