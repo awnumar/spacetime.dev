@@ -5,7 +5,9 @@ title: home
 
 # awn umar
 
-[email](mailto:awn@spacetime.dev){:rel="me"} :: [pgp](/my/key.txt){:rel="pgpkey"} :: [github](https://github.com/awnumar){:rel="me"} :: [keybase](https://keybase.io/awn){:rel="me"}
+<div id="nav">
+<a href="mailto:awn@spacetime.dev" rel="me">email</a> :: <a href="{{ site.url }}/public-key.rsa" rel="me">pgp</a> :: <a href="https://github.com/awnumar" rel="me">github</a> :: <a href="https://keybase.io/awn" rel="me">keybase</a>
+</div>
 
 Programmer mostly [working on](https://github.com/awnumar) security stuff. Mathematics and computer science at the [University of Bristol](https://en.wikipedia.org/wiki/University_of_Bristol). Here I [post](/posts) about things I'm working on or thinking about.
 
