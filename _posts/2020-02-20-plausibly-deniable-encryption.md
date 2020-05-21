@@ -7,8 +7,10 @@ title: plausibly deniable encryption
 
 It is safe to assume that in any useful [cryptosystem](https://en.wikipedia.org/wiki/Cryptosystem) $ C_k $ there exists at least one person with access to the key $ k $. An adversary with sufficient leverage can bypass the computational cost of a conventional attack by exerting their influence on this person.
 
-![xkcd_protocol]({{ site.url }}/assets/images/xkcd-security.png){: .center}
-<center>xkcd: <a href="https://xkcd.com/538/">security</a></center>
+<div class="image">
+<img src="/assets/images/xkcd-security.png" alt="xkcd security" class="center" />
+<center><p><a href="https://xkcd.com/538/">xkcd - security</a></p></center>
+</div>
 
 The technique is sometimes referred to as [rubber-hose cryptanalysis](https://en.wikipedia.org/wiki/Rubber-hose_cryptanalysis) and it gives the adversary some serious creative freedom. The security properties of the cryptosystem now rely not on the assumed difficulty of mathematical [trapdoor functions](https://en.wikipedia.org/wiki/Trapdoor_function) but on some person's tolerance to physical or psychological violence. A thief knows that pointing a gun will unlock a safe much faster than using a drill. An adversarial government will similarly seek information using torture and imprisonment rather than computational power.
 
@@ -32,16 +34,19 @@ Asserting the non-existence (**2**) of the ciphertext is equivalent to claiming 
 
 [TrueCrypt](https://en.wikipedia.org/wiki/TrueCrypt#Plausible_deniability) and [VeraCrypt](https://en.wikipedia.org/wiki/VeraCrypt#Plausible_deniability) allow the creation of [hidden volumes](https://www.veracrypt.fr/en/Hidden%20Volume.html) and [hidden operating systems](https://www.veracrypt.fr/en/VeraCrypt%20Hidden%20Operating%20System.html). The idea is that an ordinary encrypted volume will have unused regions of the disk filled with random data, and so a hidden volume can be placed there without revealing its existence.
 
-![hidden_volume_layout]({{ site.url }}/assets/images/hidden_volume_layout.png){: .center}
-<center>On-disk layout of an encrypted VeraCrypt volume.</center>
+<div class="image">
+<img src="/assets/images/hidden_volume_layout.png" alt="hidden volume layout" class="center" />
+<center><p>On-disk layout of an encrypted VeraCrypt volume.</p></center>
+</div>
 
 Suppose we have a boot drive with a standard volume protected by the key $ k_1 $ and a hidden volume protected by the key $ k_2 $. The existence of the unencrypted boot-loader reveals the fact that the standard volume exists and so Mallory can confidently demand its key. Alice may safely provide Mallory with $ k_1 $ thereby revealing the innocuous contents of the standard volume. However when Alice enters $ k_2 $, the boot-loader fails to unlock the standard region so instead it tries to decrypt at the offset where the hidden volume's header would reside. If the hidden volume exists and if the provided key is correct, this operation is successful and the boot-loader proceeds to boot the hidden operating system.
 
 This is an example of providing a decoy decryption (**3**) but you may notice that Alice also had to claim that the remaining "unused" space on the drive is random noise (**2**) and not valid ciphertext. The necessity of a secondary claim is not a special case but a general property of systems that try to provide deniability in this way.
 
-<center>xkcd: <a href="">random number</a></center>
-![xkcd_random_number]({{ site.url }}/assets/images/xkcd-random-number.png){: .center}
-<center><i>It's possible to distinguish ciphertext from data from this randomness source.</i></center>
+<div class="image">
+<img src="/assets/images/xkcd-random-number.png" alt="xkcd random number" class="center" />
+<center><p><a href="https://xkcd.com/221/">xkcd - random number</a></p></center>
+</div>
 
 Providing a plausible reason for the existence of leftover data can be tricky. VeraCrypt relies on the fact that drives are often [wiped with random data](https://wiki.archlinux.org/index.php/Disk_encryption#Preparing_the_disk) before being used as encrypted volumes. In other situations we may have to be sneakier.
 

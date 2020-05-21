@@ -8,7 +8,7 @@ A few months ago, while working on [dissident](https://github.com/awnumar/dissid
 1. Call [mlock(2)](https://linux.die.net/man/2/mlock) (or [VirtualLock](https://msdn.microsoft.com/en-us/library/windows/desktop/aa366895(v=vs.85).aspx)) on any sensitive resources.
 2. Overwrite the resources when finished with them.
 3. Allow them to run out of scope.
-4. Hope for the garbage-collector to clean them up, or force it with [`runtime.GC()`](https://golang.org/pkg/runtime/#GC).
+4. Hope for the garbage-collector to clean them up, or force it with [runtime.GC()](https://golang.org/pkg/runtime/#GC).
 
 So, I patched together a [little library](https://github.com/awnumar/memguard) that handled some of it for me, [chucked it on HN](https://news.ycombinator.com/item?id=14173716), and moved on.
 
@@ -34,8 +34,10 @@ The remaining page, the one sandwiched between the guard pages, needs to be prot
 
 The last thing is the canary: a random value placed just before the data. If it ever changes, we know that something went wrong---probably a buffer underflow. When the program first ran, we generated a global value for the canary, so we just set the canary bytes to that, and the container is pretty much ready for use.
 
-![container_memory_layout]({{ site.url }}/assets/images/memguard_memory_layout.png){: .center}
-<center>The current state of our three pages.</center>
+<div class="image">
+<img src="/assets/images/memguard_memory_layout.png" alt="container_memory_layout" class="center" />
+<center><p>The current state of our three pages.</p></center>
+</div>
 
 We can also instruct the kernel to disallow writes to the data pages so that any attempts to modify the contents of the container will trigger a SIGSEGV access violation and the process will panic.
 

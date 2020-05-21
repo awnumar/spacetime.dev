@@ -7,9 +7,11 @@ In my [post]({{ site.url }}/encrypting-secrets-in-memory) on implementing an in-
 
 A number of people asked me about the mechanisms of the attack and the scheme, so I am including the relevant parts here. It is an excellent resource and I recommend that you go and buy it.
 
-![page one]({{ site.url }}/assets/images/cold-boot/page-1.png){: .center}
-![page two]({{ site.url }}/assets/images/cold-boot/page-2.png){: .center}
-![page three]({{ site.url }}/assets/images/cold-boot/page-3.png){: .center}
+<div class="image">
+    <img src="/assets/images/cold-boot/page-1.png" alt="page one" class="center" />
+    <img src="/assets/images/cold-boot/page-2.png" alt="page two" class="center" />
+    <img src="/assets/images/cold-boot/page-3.png" alt="page three" class="center" />
+</div>
 
 [17] Jurjen Bos. Booting problems with the JEC computer. Personal communications, 1983. [Page 125]
 

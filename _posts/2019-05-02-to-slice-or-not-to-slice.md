@@ -27,7 +27,7 @@ bufarrayptr := (*[32]byte)(unsafe.Pointer(&buf[0])) // *[32]byte (same memory re
 bufarraycpy := *(*[32]byte)(unsafe.Pointer(&buf[0])) // [32]byte (copied to new memory region)
 ```
 
-A pointer to the first element of the slice is passed to [`unsafe.Pointer`](https://golang.org/pkg/unsafe/#Pointer) which is then cast to "pointer to fixed-size 32 byte array". Dereferencing this will return a copy of the data as a **new** fixed-size byte array.
+A pointer to the first element of the slice is passed to [unsafe.Pointer](https://golang.org/pkg/unsafe/#Pointer) which is then cast to "pointer to fixed-size 32 byte array". Dereferencing this will return a copy of the data as a **new** fixed-size byte array.
 
 The [unsafe cat](https://en.wikipedia.org/wiki/Memory_safety) is out of the bag so why not get funky with it? We can make our own slices, with blackjack and hookers:
 
@@ -60,7 +60,7 @@ var sl = struct {
 uint32slice := *(*[]uint32)(unsafe.Pointer(&sl))
 ```
 
-**But there is a catch**. This "raw" construction converts the `unsafe.Pointer` object into a `uintptr`---a "dumb" integer address---which will not describe the region of memory you want if the runtime or garbage collector moves the original object around. To ensure that this doesn't happen you can allocate your own memory using system-calls or a C allocator like [`malloc`](https://linux.die.net/man/3/malloc). This is exactly what we had to in [memguard](https://github.com/awnumar/memguard): the system-call wrapper is available [here](https://godoc.org/github.com/awnumar/memcall#Alloc). To avoid memory leaks, remember to [free](https://godoc.org/github.com/awnumar/memcall#Free) your allocations!
+**But there is a catch**. This "raw" construction converts the `unsafe.Pointer` object into a `uintptr`---a "dumb" integer address---which will not describe the region of memory you want if the runtime or garbage collector moves the original object around. To ensure that this doesn't happen you can allocate your own memory using system-calls or a C allocator like [malloc](https://linux.die.net/man/3/malloc). This is exactly what we had to in [memguard](https://github.com/awnumar/memguard): the system-call wrapper is available [here](https://godoc.org/github.com/awnumar/memcall#Alloc). To avoid memory leaks, remember to [free](https://godoc.org/github.com/awnumar/memcall#Free) your allocations!
 
 It seems a bit wasteful to have a garbage collector and not use it though, so why don't we let it catch some of the freeing for us? First create a container structure to work with:
 
@@ -92,7 +92,7 @@ func (b *buffer) free() {
 }
 ```
 
-We use [`runtime.SetFinalizer`](https://golang.org/pkg/runtime/#SetFinalizer) to inform the runtime about our object and what to do if it finds it some time after it becomes unreachable. Modifying `alloc` to include this looks like:
+We use [runtime.SetFinalizer](https://golang.org/pkg/runtime/#SetFinalizer) to inform the runtime about our object and what to do if it finds it some time after it becomes unreachable. Modifying `alloc` to include this looks like:
 
 ```go
 func alloc(size int) *buffer {

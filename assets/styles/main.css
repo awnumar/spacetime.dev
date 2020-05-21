@@ -1,20 +1,14 @@
 html {
-    --text: #2a2a2a;
-    --background: #FFFFFF;
-    --links: #d83033;
-    --code-block-background: #323031;
-    --code-inline-background: #f9f9f9;
-    --quote-background: #F2EFE9;
+    --text: #FFFFFF;
+    --background: #000000;
+    --links: #bd096c;
+    --code-block-background: #000000;
+    --code-inline-background: #c6c6c6;
+    --quote-background: #000000;
 }
 
 /* @media (prefers-color-scheme:dark) {
     html {
-        --text: #FFFFFF;
-        --background: #252627;
-        --links: #F5CDA7;
-        --code-block-background: #323031;
-        --code-inline-background: #323031;
-        --quote-background: #252627;
     }
 } */
 
@@ -42,6 +36,11 @@ h2 {
     margin-bottom: 1rem;
 }
 
+.image {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
 li {
     margin-top: .2rem
 }
@@ -54,11 +53,12 @@ p {
 }
 
 a {
-    color: var(--links)
+    color: var(--links);
 }
 
 img {
-    max-width: 100%
+    max-width: 100%;
+    filter: invert(100%);
 }
 
 .center {
@@ -84,31 +84,33 @@ img {
 pre code {
     background-color: var(--code-block-background);
     display: block;
-    padding: 1rem;
+    padding: 0.8rem;
     overflow-x: auto;
     overflow-y: hidden;
-    border-radius: 4px
+    border: 1px solid white;
+    margin: 1rem 0rem;
 }
 
 code {
     background-color: var(--code-inline-background);
-    padding: .2rem;
-    font-size: 105%
+    color: var(--background);
+    padding: .1rem 0.2rem;
+    border-radius: 4px;
 }
 
 table {
     width: 50%;
     font-size: 85%;
-    border: 1px solid var(--quote-background);
+    border: 1px solid var(--text);
     border-collapse: collapse;
-    margin: 1.5rem auto;
+    margin: 2rem auto;
     border-radius: 4px
 }
 
 td,
 th {
     padding: .5rem .5rem;
-    border: 1px solid var(--code-block-background);
+    border: 1px solid var(--text);
     background-color: var(--quote-background)
 }
 
@@ -117,7 +119,7 @@ th {
 }
 
 blockquote {
-    padding: .2rem .6rem;
+    padding: 0.2rem 1rem;
     margin: .5rem 0;
     border-left: .2rem solid var(--text);
     background-color: var(--quote-background);
