@@ -20,7 +20,7 @@ I'm not just talking perfect as in infinite computing power cannot touch it, I'm
 Consider two people---Alice and Bob---attempting to communicate securely, and a third person---Eve---attempting to intercept their communications. They have access to two **insecure** channels: a conventional one for bits, and a quantum one for qubits.
 
 <div class="image">
-<img src="/assets/images/xkcd-protocol.png" alt="xkcd_protocol" width="40%" class="center" />
+<img src="/assets/images/xkcd-protocol.png" alt="xkcd_protocol" width="50%" class="center" />
 <center><p><a href="https://xkcd.com/1323/">xkcd - protocol</a></p></center>
 </div>
 

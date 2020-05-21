@@ -19,7 +19,8 @@ body {
     padding: 2rem 1rem;
     margin: auto;
     color: var(--text);
-    background-color: var(--background)
+    background-color: var(--background);
+    font-size: 90%;
 }
 
 h1 {
@@ -124,7 +125,6 @@ blockquote {
     border-left: .2rem solid var(--text);
     background-color: var(--quote-background);
     border-radius: 4px;
-    font-size: 90%;
 }
 
 .highlight pre {
