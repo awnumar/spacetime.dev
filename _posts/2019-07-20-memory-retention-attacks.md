@@ -3,7 +3,7 @@ layout: post
 title: memory retention attacks
 ---
 
-In my [post]({{ site.url }}/encrypting-secrets-in-memory) on implementing an in-memory encryption scheme to protect sensitive information, I referenced a mitigation strategy called a Boojum. It is described by Bruce Schneier, Niels Ferguson and Tadayoshi Kohno in their book, [Cryptography Engineering](https://www.schneier.com/books/cryptography_engineering/): Design Principles and Practical Applications.
+In my [post]({{ site.url }}/encrypting-secrets-in-memory) on implementing an in-memory encryption scheme to protect sensitive information, I referenced a mitigation strategy called a Boojum. It is described by [Bruce Schneier](https://en.wikipedia.org/wiki/Bruce_Schneier), [Niels Ferguson](https://en.wikipedia.org/wiki/Niels_Ferguson) and [Tadayoshi Kohno](https://homes.cs.washington.edu/~yoshi/) in their book, [Cryptography Engineering: Design Principles and Practical Applications](https://www.schneier.com/books/cryptography_engineering/).
 
 A number of people asked me about the mechanisms of the attack and the scheme, so I am including the relevant parts here. It is an excellent resource and I recommend that you go and buy it.
 

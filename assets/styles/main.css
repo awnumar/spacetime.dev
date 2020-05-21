@@ -61,7 +61,7 @@ p {
 a {
     color: var(--links);
     text-decoration: none;
-    margin: 0.1rem;
+    margin: 0 0.1rem;
 }
 
 img {
