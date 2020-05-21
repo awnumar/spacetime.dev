@@ -8,8 +8,8 @@ html {
     --background: #000000;
     --links: #EF7A92;
     --code-block-background: #000000;
-    --code-inline-background: #FFA69E;
-    --quote-highlight: #FFA69E;
+    --code-inline-background: #FBF5D4;
+    --quote-highlight: #FBF5D4;
     --quote-background: #000000;
 }
 
@@ -117,8 +117,9 @@ pre code {
 code {
     background-color: var(--code-inline-background);
     color: var(--background);
-    padding: .02rem 0.2rem;
-    border-radius: 4px;
+    padding: 0rem 0.1rem;
+    margin: 0 0.1rem;
+    border-radius: 3px;
 }
 
 table {
