@@ -1,7 +1,7 @@
 html {
     --text: #FFFFFF;
     --background: #000000;
-    --links: #bd096c;
+    --links: #F4ACB7;
     --code-block-background: #000000;
     --code-inline-background: #c6c6c6;
     --quote-background: #000000;
@@ -55,6 +55,7 @@ p {
 
 a {
     color: var(--links);
+    text-decoration: none;
 }
 
 img {
@@ -95,7 +96,7 @@ pre code {
 code {
     background-color: var(--code-inline-background);
     color: var(--background);
-    padding: .1rem 0.2rem;
+    padding: .05rem 0.2rem;
     border-radius: 4px;
 }
 
