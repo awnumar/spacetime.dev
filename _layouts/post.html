@@ -8,4 +8,9 @@ layout: default
 </header>
 {{ content }}
 
-{<a href="/">home</a> : : <a href="/posts">more posts</a> : : <a href="/feed.xml">subscribe with rss/atom</a>}
+{<a href="/">home</a> : : <a href="/feed.xml">subscribe with rss/atom</a>}
+
+<ul>
+    {% for post in site.posts %}
+    <li><code class="highlighter-rouge">{{ post.date | date: "%Y-%m-%d" }}</code> : : <a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
+</ul>
