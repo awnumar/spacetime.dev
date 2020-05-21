@@ -5,7 +5,7 @@ title: home
 
 # awn umar
 
-<div id="nav">
+<div class="nav">
 <a href="mailto:awn@spacetime.dev" rel="me">email</a> : : <a href="{{ site.url }}/public-key.pgp" rel="me">pgp</a> : : <a href="https://github.com/awnumar" rel="me">github</a> : : <a href="https://keybase.io/awn" rel="me">keybase</a>
 </div>
 
@@ -15,7 +15,9 @@ My pgp key is `0xD4C316B83295F6FF`, available [here]({{ site.url }}/public-key.p
 
 ## recent posts
 
-[all posts](/posts) : : [subscribe](/feed.xml)
+<div class="nav">
+<a href="/posts">all posts</a> : : <a href="/feed.xml">subscribe</a>
+</div>
 
 {% for post in site.posts limit: 4 %}
 - `{{ post.date | date: "%Y-%m-%d" }}` : : [{{ post.title }}]({{ post.url }}){% endfor %}
@@ -28,7 +30,8 @@ My pgp key is `0xD4C316B83295F6FF`, available [here]({{ site.url }}/public-key.p
 ## papers
 
 {% for paper in site.data.papers %}
-- {{ paper.title }} [[pdf]({{ paper.url }})]
+> {{ paper.title }} [[pdf]({{ paper.url }})]
+> 
+> {{ paper.abstract }}
 
-    _{{ paper.abstract }}_
 {% endfor %}

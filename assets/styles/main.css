@@ -6,9 +6,10 @@
 html {
     --text: #FFFFFF;
     --background: #000000;
-    --links: #F4ACB7;
+    --links: #FFA69E;
     --code-block-background: #000000;
-    --code-inline-background: #c6c6c6;
+    --code-inline-background: #FFA69E;
+    --quote-highlight: #FFA69E;
     --quote-background: #000000;
 }
 
@@ -25,42 +26,50 @@ body {
     margin: auto;
     color: var(--text);
     background-color: var(--background);
-    font-size: 90%;
+    font-size: 100%;
 }
 
 h1 {
     margin-top: .5rem;
-    margin-bottom: 0
+    margin-bottom: 0rem;
+    padding-bottom: 0rem;
 }
 
 h2 {
-    margin-top: 1.8rem;
-    margin-bottom: .3rem
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+    padding-bottom: 0rem;
 }
 
-#nav {
-    margin-bottom: 1rem;
+.nav {
+    margin: 0.2rem 0rem;
+    padding: 0;
 }
 
 .image {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 ul {
-    padding: 0rem 0.7rem;
+    padding: 0;
+    margin: 1rem 0.5rem;
     list-style-type: none;
 }
 
+ol {
+    padding-left: 1rem;
+    margin: 1rem 0.5rem;
+}
+
 li {
-    margin-top: .2rem
+    margin: .5rem;
+    padding: 0rem;
 }
 
 p {
-    margin-top: .3rem;
-    margin-bottom: .3rem;
-    padding-top: 0;
-    padding-bottom: 0
+    padding: 0rem;
+    margin: 1rem 0rem;
 }
 
 a {
@@ -71,7 +80,7 @@ a {
 
 img {
     max-width: 100%;
-    padding: 0.5rem 0;
+    padding: 0;
     filter: invert(100%);
 }
 
@@ -108,7 +117,7 @@ pre code {
 code {
     background-color: var(--code-inline-background);
     color: var(--background);
-    padding: .05rem 0.2rem;
+    padding: .02rem 0.2rem;
     border-radius: 4px;
 }
 
@@ -135,7 +144,7 @@ th {
 blockquote {
     padding: 0rem 1rem;
     margin: 1rem 0;
-    border-left: .2rem solid var(--text);
+    border-left: .2rem solid var(--quote-highlight);
     background-color: var(--quote-background);
     border-radius: 4px;
 }
