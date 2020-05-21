@@ -44,6 +44,7 @@ Suppose we have a boot drive with a standard volume protected by the key $ k_1 $
 This is an example of providing a decoy decryption (_3_) but you may notice that Alice also had to claim that the remaining "unused" space on the drive is random noise (_2_) and not valid ciphertext. The necessity of a secondary claim is not a special case but a general property of systems that try to provide deniability in this way.
 
 <div class="image">
+<center><p>It's possible to distinguish ciphertext from data from this randomness source.</p></center>
 <img src="/assets/images/xkcd-random-number.png" alt="xkcd random number" class="center" />
 <center><p><a href="https://xkcd.com/221/">xkcd - random number</a></p></center>
 </div>
