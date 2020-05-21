@@ -15,9 +15,9 @@ But it is necessary, right? I mean, if you use conventional key-exchange using R
 
 Well, there is: quantum key-distribution.
 
-I'm not just talking perfect as in infinite computing power cannot touch it, I'm talking so perfect that no one can even attempt to **intercept** the transmission without being detected. This is guaranteed by the [no-cloning theorem](https://en.wikipedia.org/wiki/No-cloning_theorem), so if this turns out to be wrong, we would have to reconsider our most fundamental beliefs about the nature of the universe---not to mention that it would fly in the face of the most precise and accurate experimental tests in all of science.
+I'm not just talking perfect as in infinite computing power cannot touch it, I'm talking so perfect that no one can even attempt to _intercept_ the transmission without being detected. This is guaranteed by the [no-cloning theorem](https://en.wikipedia.org/wiki/No-cloning_theorem), so if this turns out to be wrong, we would have to reconsider our most fundamental beliefs about the nature of the universe---not to mention that it would fly in the face of the most precise and accurate experimental tests in all of science.
 
-Consider two people---Alice and Bob---attempting to communicate securely, and a third person---Eve---attempting to intercept their communications. They have access to two **insecure** channels: a conventional one for bits, and a quantum one for qubits.
+Consider two people---Alice and Bob---attempting to communicate securely, and a third person---Eve---attempting to intercept their communications. They have access to two _insecure_ channels: a conventional one for bits, and a quantum one for qubits.
 
 <div class="image">
 <img src="/assets/images/xkcd-protocol.png" alt="xkcd_protocol" width="50%" class="center" />
@@ -35,13 +35,13 @@ She informs Bob of this scheme through the conventional channel, and now they ar
 
 {% katexmm %}
 
-Alice begins by generating cryptographically-secure random pairings of bits and basis---**huge** amounts of them. For example, $\{(1, diagonal), (0, diagonal), (0, rectilinear), \ldots\}$.
+Alice begins by generating cryptographically-secure random pairings of bits and basis---_huge_ amounts of them. For example, $\{(1, diagonal), (0, diagonal), (0, rectilinear), \ldots\}$.
 
 {% endkatexmm %}
 
 One at a time, she encodes the bits in their associated basis and sends the resulting polarised photons to Bob through the quantum channel. Now, the way this works is that any party that wishes to read these incoming qubits cannot tell which basis they were encoded in---so they just guess. But there's another catch: if they measure the qubit in the wrong basis, the reading they get is purely random, and the qubit is destroyed in either case.
 
-If you're paying attention, you will have realised the importance of that property. Eve cannot read any qubits and remain undetected, as **any attempted measurement on her part will result in the destruction of the original data**.
+If you're paying attention, you will have realised the importance of that property. Eve cannot read any qubits and remain undetected, as _any attempted measurement on her part will result in the destruction of the original data_.
 
 After Alice has sent all of her data, Bob publicly informs Alice of his choices of basis for each bit. Alice then replies with the actual basis and they both discard any bits where Bob guessed incorrectly. Statistically, Bob will guess correctly around 50% of the time, so they are left with around half of the total bits sent.
 
