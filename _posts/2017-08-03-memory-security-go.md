@@ -3,7 +3,7 @@ layout: post
 title: 'memory security in go'
 ---
 
-A few months ago, while working on [dissident](https://github.com/awnumar/dissident), I started looking around for guidance on how I should manage encryption keys. I found a few references here and there, but the best I happened to put together with the limited information available was something like:
+A few months ago, while working on [gravity](https://github.com/awnumar/gravity), I started looking around for guidance on how I should manage encryption keys. I found a few references here and there, but the best I happened to put together with the limited information available was something like:
 
 1. Call [mlock(2)](https://linux.die.net/man/2/mlock) (or [VirtualLock](https://msdn.microsoft.com/en-us/library/windows/desktop/aa366895(v=vs.85).aspx)) on any sensitive resources.
 2. Overwrite the resources when finished with them.
