@@ -119,11 +119,12 @@ th {
 }
 
 blockquote {
-    padding: 0.2rem 1rem;
-    margin: .5rem 0;
+    padding: 0rem 1rem;
+    margin: 1rem 0;
     border-left: .2rem solid var(--text);
     background-color: var(--quote-background);
-    border-radius: 4px
+    border-radius: 4px;
+    font-size: 90%;
 }
 
 .highlight pre {
