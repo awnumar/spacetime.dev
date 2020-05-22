@@ -1,6 +1,6 @@
 @font-face {
-    font-family: AlegreyaRegular;
-    src: url(fonts/Alegreya-Regular.otf);
+    font-family: AlegreyaSansRegular;
+    src: url(fonts/AlegreyaSans-Regular.otf);
 }
 
 html {
@@ -19,7 +19,7 @@ html {
 } */
 
 body {
-    font-family: AlegreyaRegular;
+    font-family: AlegreyaSansRegular;
     max-width: 52em;
     line-height: 1.5;
     padding: 2rem 1rem;
