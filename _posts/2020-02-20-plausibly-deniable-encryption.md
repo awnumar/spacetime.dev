@@ -63,7 +63,7 @@ Imagine a huge library where every book is full of gibberish. There is a librari
 > 
 > For decryption, again Alice provides the key $ k $ and Faythe computes the sub-keys $ a, b = \Phi(k) $. She then iterates over $ i \in \mathbb{N} $, retrieving the values $ c_i $ corresponding to the keys $ H_a(i) $ and computing $ D_b(c_i) = D_b(E_b(p_i)) = p_i $, stopping at $ i = n + 1 $ where the key-value pair does not exist. The plaintext is then $ p = p_1 \mathbin\Vert p_2 \mathbin\Vert \ldots \mathbin\Vert p_n $, after unpadding each $ p_i $.
 >
-> Some extra consideration has to go into integrity and authentication to prevent attacks where the data Alice stores is not the data she gets back out. We leave this out for simplicity's sake.
+> Some extra consideration has to go into integrity and authentication to prevent attacks where the data Alice stores is not the data she gets back out. We leave this out here for simplicity's sake.
 
 Suppose the library contains $ n $ books in total. Mallory cannot say anything about Alice's data apart from that its total size is less than or equal to the amount of data that can be stored within $ n $ books. If, under duress, Alice is forced to reveal a decoy key that pieces together data from $ m $ books, she needs some way to explain the remaining $ n - m $ books that were not used. She could claim that,
 
