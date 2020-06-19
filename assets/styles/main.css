@@ -13,7 +13,7 @@ html {
     --quote-background: #FFFFFF;
 }
 
-@media (prefers-color-scheme:dark) {
+@media screen and (prefers-color-scheme:dark) {
     html {
         --text: #FFFFFF;
         --background: #000000;
