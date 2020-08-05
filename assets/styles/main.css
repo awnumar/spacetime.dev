@@ -16,16 +16,16 @@ html {
 @media screen and (prefers-color-scheme:dark) {
     html {
         --text: #FFFFFF;
-        --background: #000000;
+        --background: #121212;
         --links: #EF7A92;
         --code-block-background:#323031;
         --code-inline-background: #FBF5D4;
         --quote-highlight: #FBF5D4;
-        --quote-background: #000000;
+        --quote-background: #121212;
     }
 
     img {
-        filter: invert(100%);
+        filter: invert(93%);
     }
 
     pre code {
