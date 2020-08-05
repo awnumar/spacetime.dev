@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include math-head.html %}
+<body>
+<div class="menu">
+    [<a href="/">home</a>:
+    :<a href="/posts">posts</a>:
+    :<a href="/feed.xml">subscribe</a>]
+</div>
+<div class="main">
+{% katexmm %}
+{{ content }}
+{% endkatexmm %}
+</div>
+</body>
+</html>

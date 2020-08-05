@@ -1,9 +1,8 @@
 ---
-layout: post
+layout: math-post
 title: encrypting secrets in memory
 ---
 
-{% katexmm %}
 
 In a [previous post]({{ site.url }}/memory-security-go) I talked about designing and implementing an in-memory data structure for storing sensitive information in Go. The latest version of [memguard](https://github.com/awnumar/memguard) adds something new: encryption.
 
@@ -77,5 +76,3 @@ The [documentation](https://godoc.org/github.com/awnumar/memguard) provides a re
 The most pressing issue at the moment is that the package relies on cryptographic primitives implemented by the Go standard library which does not secure its own memory and may leak values that are passed to it. There has been [some discussion](https://github.com/golang/go/issues/21865) about this but for now it seems as though rewriting crucial security APIs to use specially allocated memory is the only feasible solution.
 
 If you have any ideas and wish to contribute, please do [get in touch](mailto:awn@spacetime.dev) or open a pull request.
-
-{% endkatexmm %}

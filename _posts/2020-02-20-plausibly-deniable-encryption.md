@@ -1,9 +1,7 @@
 ---
-layout: post
+layout: math-post
 title: plausibly deniable encryption
 ---
-
-{% katexmm %}
 
 It is safe to assume that in any useful [cryptosystem](https://en.wikipedia.org/wiki/Cryptosystem) $ C_k $ there exists at least one person with access to the key $ k $. An adversary with sufficient leverage can bypass the computational cost of a conventional attack by exerting their influence on this person.
 
@@ -90,5 +88,3 @@ There are some drawbacks of this scheme. There is an overhead in storing data in
 However we now have something that lets you have an arbitrary number of independent "folders" stored amongst numerous indistinguishable packets, with an adversary being unable to infer any information other than the maximum size of the stored data. This is a powerful property but it should be considered as part of the whole picture including your threat model and usability requirements.
 
 > There is an experimental client implementing the spirit of this protocol [here](https://github.com/awnumar/gravity). As of the time of writing, _it is not ready for serious use_. However there are some exciting ideas I have for making this into a production ready and usable client in the (hopefully) near future.
-
-{% endkatexmm %}
