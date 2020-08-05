@@ -4,7 +4,7 @@
 }
 
 html {
-    --text: #2a2a2a;
+    --text: #121212;
     --background: #FFFFFF;
     --links: #d83033;
     --code-block-background: #323031;
@@ -25,7 +25,7 @@ html {
     }
 
     img {
-        filter: invert(93%);
+        filter: invert(7.058823529%);
     }
 
     pre code {
