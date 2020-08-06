@@ -3,6 +3,8 @@ layout: math-post
 title: 'quantum key-exchange'
 ---
 
+{% katexmm %}
+
 The perfect cryptographic primitive---does it exist?
 
 You've probably heard of the [one-time pad](https://en.wikipedia.org/wiki/One-time_pad): a cipher infamous for its drawbacks almost as much as for its absolute perfection. It is an example of an [information-theoretic secure](https://en.wikipedia.org/wiki/Information-theoretic_security) cipher---one that is mathematically proven to be unbreakable even in the face of infinite computing power.
@@ -48,3 +50,5 @@ This setup is provably secure against passive eavesdropping, but what about an a
 Luckily, there exists an authentication scheme that provides unconditionally-secure authentication---similar to the OTP. It was invented in the late 70's by J. Lawrence Carter and Mark N. Wegman, and so is commonly referred to as [Wegman-Carter authentication](https://www.lysator.liu.se/~jc/mthesis/5_Unconditionally_secure_au.html). Without getting into the specific details---this post is meant to be about quantum key-exchange---it allows us to turn a pre-shared secret into a [message authentication code](https://en.wikipedia.org/wiki/Message_authentication_code) that we can include with our messages.
 
 So, to authenticate the conventional channel, on the first exchange Alice and Bob simply agree on a small, cryptographically-secure key in advance. They use this key for Wegman-Carter authentication and save a subset of the exchanged bits for use as the key in the next exchange. This way, both active and passive attacks by Eve are impossible without detection, and the OTP is back in the game.
+
+{% endkatexmm %}
