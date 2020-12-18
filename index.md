@@ -11,8 +11,6 @@ title: home
 
 Programmer mostly [working on](https://github.com/awnumar) security stuff. Mathematics and computer science at the [University of Bristol](https://en.wikipedia.org/wiki/University_of_Bristol). Here I [post](/posts) about things I'm working on or thinking about.
 
-My pgp public key is `0xD4C316B83295F6FF`, available [here]({{ site.url }}/public-key.pgp), on [Keybase](https://keybase.io/awn/pgp_keys.asc), and via [keys.openpgp.org](https://keys.openpgp.org/search?q=awn%40spacetime.dev). These sources should mutually agree.
-
 ## recent posts
 
 <div class="nav">
