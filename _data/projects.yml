@@ -7,3 +7,6 @@
 - name: gravity
   url: https://github.com/awnumar/gravity
   description: experimental user-space data protection utility providing plausibly deniable encryption
+- name: ephemeral
+  url: https://github.com/awnumar/ephemeral
+  description: web-based end-to-end encrypted multi-party chat server
