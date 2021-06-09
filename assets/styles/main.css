@@ -163,7 +163,7 @@ th {
 
 blockquote {
     padding: 0rem 1rem;
-    margin: 1rem 0.6rem;
+    margin: 1.5rem 0.6rem;
     border-left: .2rem solid var(--quote-highlight);
     background-color: var(--quote-background);
     border-radius: 4px;

@@ -28,7 +28,7 @@ Programmer mostly [working on](https://github.com/awnumar) security stuff. Mathe
 ## papers
 
 {% for paper in site.data.papers %}
-> {{ paper.title }} [[pdf]({{ paper.url }})]
+> **{{ paper.title }}** [[pdf]({{ paper.url }})]
 > 
 > {{ paper.abstract }}
 

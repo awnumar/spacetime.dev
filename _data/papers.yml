@@ -1,3 +1,7 @@
+- title: "Obfuscating Network Traffic to Circumvent Censorship"
+  url: /papers/obfuscating-network-traffic.pdf
+  abstract: "Explore widely used network traffic fingerprinting and obfuscation techniques. Introduce a modular proxy tunnel framework and evaluate it against state-of-the-
+art DPI engines and a nation-state adversary."
 - title: "Minimal Surface Theory: The Mathematics of Soap Films"
   url: /papers/minimal-surface-theory.pdf
   abstract: "An introduction to minimal surfaces and their relation to soap films, and some ways that they can be created."
