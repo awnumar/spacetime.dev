@@ -1,6 +1,7 @@
 @font-face {
     font-family: AlegreyaSansRegular;
-    src: url(/assets/styles/fonts/AlegreyaSans-Regular.woff);
+    src: url(/assets/styles/fonts/AlegreyaSans-Regular.woff2) format("woff2"),
+         url(/assets/styles/fonts/AlegreyaSans-Regular.woff) format("woff");
 }
 
 html {
