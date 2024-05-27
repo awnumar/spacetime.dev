@@ -17,7 +17,7 @@ Programmer mostly [working on](https://github.com/awnumar) security stuff. Mathe
 <a href="/posts">all posts</a> : : <a href="/feed.xml">subscribe</a>
 </div>
 
-{% for post in site.posts limit: 4 %}
+{% for post in site.posts limit: 10 %}
 - {{ post.date | date: "%Y-%m-%d" }} : : [{{ post.title }}]({{ post.url }}){% endfor %}
 
 ## projects
