@@ -14,7 +14,7 @@ html {
     --quote-background: #FFFFFF;
 }
 
-/* @media screen and (prefers-color-scheme:dark) {
+@media screen and (prefers-color-scheme:dark) {
     html {
         --text: #FFFFFF;
         --background: #121212;
@@ -32,7 +32,7 @@ html {
     pre code {
         border-style: none;
     }
-} */
+}
 
 body {
     max-width: 52em;
