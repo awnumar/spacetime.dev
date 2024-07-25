@@ -7,3 +7,4 @@ gem "webrick"
 gem "rake"
 gem "strscan"
 gem "rexml"
+gem 'jekyll-redirect-from'
