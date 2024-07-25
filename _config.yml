@@ -15,6 +15,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-katex
+  - jekyll-redirect-from
 
 include: [_headers, _redirects]
 exclude: [LICENCE]
