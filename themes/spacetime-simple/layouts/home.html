@@ -1,0 +1,33 @@
+{{ define "main" }}
+{{ .Content }}
+
+<h2>posts</h2>
+
+<div class="nav">
+<a href="/posts">all posts</a> : : <a href="/index.xml">subscribe</a>
+</div>
+
+<ul>
+{{ range (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
+<li>{{ .Date.Format "2006-01-02" }} : : <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+{{ end }}
+</ul>
+
+<h2>projects</h2>
+
+<ul>
+{{ range hugo.Data.projects }}
+<li><a href="{{ .url }}">{{ .name }}</a> : : {{ .description }}</li>
+{{ end }}
+</ul>
+
+<h2>papers</h2>
+
+{{ range hugo.Data.papers }}
+<blockquote>
+<p><strong>{{ .title }}</strong> [<a href="{{ .url }}">pdf</a>]</p>
+<p>{{ .abstract }}</p>
+</blockquote>
+{{ end }}
+
+{{ end }}

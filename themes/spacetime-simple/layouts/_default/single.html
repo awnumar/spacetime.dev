@@ -1,0 +1,27 @@
+{{ define "main" }}
+<header>
+    <h1>{{ .Title }}</h1>
+    <div class="nav">
+        {{ $day := .Date.Format "2" }}
+        {{ $suffix := "th" }}
+        {{ if or (eq $day "1") (eq $day "21") (eq $day "31") }}{{ $suffix = "st" }}{{ end }}
+        {{ if or (eq $day "2") (eq $day "22") }}{{ $suffix = "nd" }}{{ end }}
+        {{ if or (eq $day "3") (eq $day "23") }}{{ $suffix = "rd" }}{{ end }}
+        {{ .Date.Format "January" }} {{ $day }}{{ $suffix }}, {{ .Date.Format "2006" }}
+    </div>
+</header>
+
+{{ .Content }}
+
+<div class="nav-bottom">
+    <a href="/">home</a> : : <a href="/index.xml">subscribe with rss/atom</a>
+</div>
+
+<ul>
+{{ range (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
+    {{ if ne .Permalink $.Permalink }}
+        <li>{{ .Date.Format "2006-01-02" }} : : <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end }}
+{{ end }}
+</ul>
+{{ end }}

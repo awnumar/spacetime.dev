@@ -1,0 +1,23 @@
+baseURL = 'https://spacetime.dev/'
+languageCode = 'en-gb'
+title = 'spacetime.dev'
+theme = 'spacetime-simple'
+
+[frontmatter]
+  date = [':default', ':filename']
+
+[permalinks.page]
+  posts = '/:slug'
+
+[markup.goldmark.extensions.passthrough]
+  enable = true
+  [markup.goldmark.extensions.passthrough.delimiters]
+    block = [['$$', '$$']]
+    inline = [['$', '$']]
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.highlight]
+  noClasses = false
+  tabWidth = 4

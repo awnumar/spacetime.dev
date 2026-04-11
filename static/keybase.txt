@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/awn
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://spacetime.dev
+  * I am awn (https://keybase.io/awn) on keybase.
+  * I have a public key ASAxDPmsYUiVNAyyrHP7IlqFN2Wfzik2-CEK5DatvHpqawo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01015cd89f74d16b947335681a8a87cee2191faf30f0fbf03314e820a79214c88d700a",
+      "host": "keybase.io",
+      "kid": "0120310cf9ac614895340cb2ac73fb225a8537659fce2936f8210ae436adbc7a6a6b0a",
+      "uid": "1e97a47161249bb402a5ffee8a547e19",
+      "username": "awn"
+    },
+    "merkle_root": {
+      "ctime": 1565695440,
+      "hash": "96cd843f66d0280c078cf4f99cddc5f2d65847a23f73f77e43a46599b9ed047fda3862ad599901630cb9465bfdd9af81f84d84ef0e21a44ae762e57cff1d7891",
+      "hash_meta": "407106fbfd0b5a8a62d36e3ebf934612587eda9d1a5241fb055f2805362671c7",
+      "seqno": 6003035
+    },
+    "service": {
+      "entropy": "y/sdF+C+LPuLHXZw38UStOPf",
+      "hostname": "spacetime.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.2.0"
+  },
+  "ctime": 1565695459,
+  "expire_in": 504576000,
+  "prev": "1850be7a09d7fcf556e8636bab13e1508dd3c7efd1ec78f2377d1590456c7311",
+  "seqno": 155,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgMQz5rGFIlTQMsqxz+yJahTdln84pNvghCuQ2rbx6amsKp3BheWxvYWTES5cCzJvEIBhQvnoJ1/z1Vuhja6sT4VCN08fv0ex48jd9FZBFbHMRxCCSqRPVD2EQIN2eJnLoFHwAdhlGb6JE11Ii3WgpEQmPUgIBwqNzaWfEQAotI4E+WFpsemZWQt+T4RlpdzTHXr1eOpzSluFsP89s4Ia22QRcHmaokwuL5sD2MMJldhAzuXDyVD/XfJTY9QSoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCDJfNP3TarXpFXKliZfzRkAg2OHZnlmAEBwJuZ6whCg6qN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/awn
+
+==================================================================
