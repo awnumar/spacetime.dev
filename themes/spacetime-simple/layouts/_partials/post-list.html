@@ -7,6 +7,6 @@
 {{- end -}}
 <ul>
 {{- range sort $posts "date" "desc" }}
-<li>{{ .date.Format "2006-01-02" }} : : <a href="{{ .url }}">{{ .title }}</a>{{ if .external }} ↗{{ end }}</li>
+<li>{{ .date.Format "2006-01-02" }} : : <a href="{{ .url }}"{{ if .external }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .title }}</a>{{ if .external }} ↗{{ end }}</li>
 {{- end }}
 </ul>
