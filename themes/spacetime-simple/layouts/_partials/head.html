@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#000000" />
-<title>{{ .Title }} :: spacetime.dev</title>
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} :: {{ .Site.Title }}{{ end }}</title>
 <link rel="stylesheet" href="/assets/styles/main.min.css">
 {{ if .Params.math }}<link rel="stylesheet" href="/assets/styles/katex.min.css">{{ end }}
 <link rel="icon" href="/favicon.ico">

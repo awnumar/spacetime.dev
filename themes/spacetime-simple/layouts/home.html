@@ -7,11 +7,7 @@
 <a href="/posts">all posts</a> : : <a href="/index.xml">subscribe</a>
 </div>
 
-<ul>
-{{ range (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
-<li>{{ .Date.Format "2006-01-02" }} : : <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-{{ end }}
-</ul>
+{{ partial "post-list.html" . }}
 
 <h2>projects</h2>
 

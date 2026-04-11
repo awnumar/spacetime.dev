@@ -17,11 +17,19 @@
     <a href="/">home</a> : : <a href="/index.xml">subscribe with rss/atom</a>
 </div>
 
+{{- $posts := slice -}}
+{{- range where .Site.RegularPages "Section" "posts" -}}
+  {{- $posts = $posts | append (dict "title" .Title "url" .RelPermalink "date" .Date "permalink" .Permalink "external" false) -}}
+{{- end -}}
+{{- range hugo.Data.external_posts -}}
+  {{- $posts = $posts | append (dict "title" .title "url" .url "date" (.date | time.AsTime) "permalink" .url "external" true) -}}
+{{- end -}}
 <ul>
-{{ range (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
-    {{ if ne .Permalink $.Permalink }}
-        <li>{{ .Date.Format "2006-01-02" }} : : <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-    {{ end }}
-{{ end }}
+{{- $current := .Permalink -}}
+{{- range sort $posts "date" "desc" }}
+  {{- if ne .permalink $current }}
+<li>{{ .date.Format "2006-01-02" }} : : <a href="{{ .url }}">{{ .title }}</a>{{ if .external }} ↗{{ end }}</li>
+  {{- end }}
+{{- end }}
 </ul>
 {{ end }}

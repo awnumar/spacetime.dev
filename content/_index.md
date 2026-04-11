@@ -1,5 +1,5 @@
 ---
-title: home
+title: spacetime.dev
 ---
 
 # awn umar

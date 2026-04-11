@@ -1,0 +1,6 @@
+- title: 'how monzo generates sensitive secrets for its banking platform'
+  url: https://monzo.com/blog/how-we-securely-generate-sensitive-secrets
+  date: '2024-07-23'
+- title: 'securely delegating trust with signatures and key management'
+  url: https://monzo.com/blog/2022/02/15/securely-delegating-trust-with-digital-signatures-and-secret-storage-systems
+  date: '2022-02-15'
