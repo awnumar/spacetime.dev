@@ -1,0 +1,11 @@
+{{ define "main" }}
+<h1>posts</h1>
+
+<ul>
+{{ range .Pages.ByDate.Reverse }}
+<li>{{ .Date.Format "2006-01-02" }} : : <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+{{ end }}
+</ul>
+
+<a href="/index.xml">subscribe with rss/atom</a>
+{{ end }}

@@ -1,0 +1,12 @@
+{{- $posts := slice -}}
+{{- range where .Site.RegularPages "Section" "posts" -}}
+  {{- $posts = $posts | append (dict "title" .Title "url" .RelPermalink "date" .Date "external" false) -}}
+{{- end -}}
+{{- range hugo.Data.external_posts -}}
+  {{- $posts = $posts | append (dict "title" .title "url" .url "date" (.date | time.AsTime) "external" true) -}}
+{{- end -}}
+<ul>
+{{- range sort $posts "date" "desc" }}
+<li>{{ .date.Format "2006-01-02" }} : : <a href="{{ .url }}"{{ if .external }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .title }}</a>{{ if .external }} ↗{{ end }}</li>
+{{- end }}
+</ul>
