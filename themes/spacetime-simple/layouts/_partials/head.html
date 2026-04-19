@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#000000" />
 <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} :: {{ .Site.Title }}{{ end }}</title>
-<link rel="stylesheet" href="/assets/styles/main.min.css">
+{{ partial "head/css.html" . }}
 {{ if .Params.math }}<link rel="stylesheet" href="/assets/styles/katex.min.css">{{ end }}
 <link rel="icon" href="/favicon.ico">
 <link rel="alternate" type="application/atom+xml" href="https://spacetime.dev/index.xml" />

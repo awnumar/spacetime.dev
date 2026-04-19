@@ -5,7 +5,9 @@ title: spacetime.dev
 # awn umar
 
 <div class="nav">
-<a href="mailto:awn@spacetime.dev" rel="me">email</a> : : <a href="https://keybase.io/awn/pgp_keys.asc" rel="me">pgp</a> : : <a href="https://github.com/awnumar" rel="me">github</a>
+<a href="mailto:awn@spacetime.dev" rel="me">email</a> : : <a href="https://github.com/awnumar" rel="me">github</a> : : <a href="/age-public-key.txt" rel="me">age public key</a>
 </div>
 
-Programmer mostly [working on](https://github.com/awnumar) security stuff. Mathematics and computer science at the [University of Bristol](https://en.wikipedia.org/wiki/University_of_Bristol). Here I [post](/posts) about things I'm working on or thinking about.
+I'm a cryptography engineer. My open source work involves systems that keep information private, even under coercion.
+
+My age public key is available [here](/age-public-key.txt); use it to encrypt information intended for my eyes only. Requires [age v1.3.0+](https://github.com/FiloSottile/age/tree/main#usage).
