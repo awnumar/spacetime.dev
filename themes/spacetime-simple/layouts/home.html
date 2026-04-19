@@ -1,25 +1,25 @@
 {{ define "main" }}
 {{ .Content }}
 
-<h2>posts</h2>
-
-<div class="nav">
-<a href="/posts">all posts</a> : : <a href="/index.xml">subscribe</a>
-</div>
-
-{{ partial "post-list.html" . }}
-
-<h2>projects</h2>
+<h2>software</h2>
 
 <ul>
-{{ range hugo.Data.projects }}
+{{ range hugo.Data.software }}
 <li><a href="{{ .url }}">{{ .name }}</a> : : {{ .description }}</li>
 {{ end }}
 </ul>
 
-<h2>papers</h2>
+<h2>posts</h2>
 
-{{ range hugo.Data.papers }}
+<div class="nav">
+<a href="/index.xml">subscribe with rss/atom</a>
+</div>
+
+{{ partial "post-list.html" . }}
+
+<h2>theses</h2>
+
+{{ range hugo.Data.theses }}
 <blockquote>
 <p><strong>{{ .title }}</strong> [<a href="{{ .url }}">pdf</a>]</p>
 <p>{{ .abstract }}</p>
